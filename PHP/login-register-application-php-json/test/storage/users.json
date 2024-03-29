@@ -6,5 +6,9 @@
     {
         "username": "AAA",
         "password": "$2y$10$Fz0lHueoXozit6N0qNkOC.pJ4mEWfp71clFZofblj\/2nBdLH6\/35O"
+    },
+    {
+        "username": "group109",
+        "password": "$2y$10$EMLQVqVedXO0HpNLE.DbVutiuDG42BkX3wuvdmADHIwetkwlzSN92"
     }
 ]
