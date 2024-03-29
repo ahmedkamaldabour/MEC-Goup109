@@ -1,0 +1,17 @@
+
+
+//  register
+- html page ( done )
+- 4 input fields ( email , username, password, confirm password) ( done )
+- on submit, save data in local storage ( json file) ( done )
+*** when i submit the data
+- validate the data
+- save the data in json file ( done )
+- redirect the user to login page ( done )
+
+
+// login
+- html page ( done )
+- 2 input fields ( email , password) ( done )
+- if the data is correct, redirect the user to home page
+- if not, show error message
