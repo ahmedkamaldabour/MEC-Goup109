@@ -7,7 +7,7 @@
 </head>
 <body>
 
-<?php include 'h1.php';?>
+<?php require_once 'h1-test.php'; ?>
 
 </body>
 </html>
