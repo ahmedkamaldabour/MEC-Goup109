@@ -6,6 +6,7 @@ is_login();
 
 include 'database/db_connection.php';
 include 'src/users.php';
+include 'src/validation.php';
 $conn = get_connection();
 
 $errors = [
@@ -15,8 +16,8 @@ $errors = [
 ];
 
 if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['login'])) {
-    $email = trim(htmlspecialchars(htmlentities($_POST['email'])));
-    $password = trim(htmlspecialchars(htmlentities($_POST['password'])));
+    $email = sanitization($_POST['email']);
+    $password = sanitization($_POST['password']);
     $is_valid = true;
     if (empty($email) || empty($password)) {
         $is_valid = false;
@@ -26,8 +27,7 @@ if ($_SERVER['REQUEST_METHOD'] === "POST" && isset($_POST['login'])) {
         $user = check_user_can_login($email, $password);
         if ($user) {
             $_SESSION['user'] = $user;
-            header('Location: index.php');
-            exit();
+            redirect_to('index');
         }
     }
 }

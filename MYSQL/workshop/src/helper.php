@@ -5,6 +5,7 @@ function dd($value)
 {
     echo "<pre>";
     var_dump($value);
+    echo "</pre>";
     die();
 }
 
@@ -12,6 +13,7 @@ function dump($value)
 {
     echo "<pre>";
     var_dump($value);
+    echo "</pre>";
 }
 
 
@@ -23,7 +25,7 @@ function is_login()
     return true;
 }
 
-function not_login()
+function redirect_if_not_login()
 {
     if (!isset($_SESSION['user'])) {
         redirect_to('login');
@@ -35,5 +37,6 @@ function not_login()
 function redirect_to($page_name)
 {
     header("Location: $page_name.php");
+    exit();
 }
 
