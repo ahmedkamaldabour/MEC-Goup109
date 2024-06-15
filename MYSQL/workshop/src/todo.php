@@ -1,6 +1,5 @@
 <?php
 
-
 function get_all_user_todos($user_id)
 {
     global $conn;

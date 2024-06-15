@@ -4,9 +4,9 @@ include 'src/helper.php';
 redirect_if_not_login();
 
 include 'database/db_connection.php';
+$conn = get_connection();
 include 'src/todo.php';
 include 'src/validation.php';
-$conn = get_connection();
 $user_id = $_SESSION['user']['id'];
 
 $errors = [
@@ -54,3 +54,4 @@ include 'inc/header.php';
 <?php
 include 'inc/footer.php';
 ?>
+

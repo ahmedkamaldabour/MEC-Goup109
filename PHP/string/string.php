@@ -13,6 +13,7 @@
 //         01234
 $stirng = "Nasef"; // array of char
 
+echo $stirng[] = 'a' ;
 $count = 0 ;
 for($i=0 ; $stirng[$i] ; $i++){
     $count++;
@@ -21,7 +22,7 @@ echo $i ;
 
 $count = 0 ;
 $i = 0 ;
-while($stirng[$i] !=null){
+while(isset($stirng[$i]) !=null){
     $count++;
     $i++ ;
 }
