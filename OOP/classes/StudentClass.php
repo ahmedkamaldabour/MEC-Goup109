@@ -1,15 +1,15 @@
 <?php
 
-class StudentClass
-{
-    public $fristName;
-    public $lastName;
-    public $age;
-    public $address;
-    public $grade;
-    public $department;
+include 'HumanClass.php';
+include 'StudentTrait.php';
+include 'TestTrait.php';
+include 'TestInterface.php';
+include 'HiInterface.php';
 
-    public function __construct($firstName , $lastName , $age , $address , $grade , $department)
+class StudentClass extends HumanClass implements TestInterface , HiInterface
+{
+    use StudentTrait;
+    public function __construct($firstName, $lastName, $age, $address, $grade, $department)
     {
         $this->fristName = $firstName;
         $this->lastName = $lastName;
@@ -19,13 +19,33 @@ class StudentClass
         $this->department = $department;
     }
 
-    public function getStudentData()
+    public function greet()
     {
-        return $this->fristName . ' - ' . $this->lastName . ' - ' . $this->age . ' - ' . $this->address . ' - ' . $this->grade . ' - ' . $this->department;
+        echo 'hello student';
+    }
+
+    public function test2()
+    {
+        // TODO: Implement test2() method.
+    }
+
+    public function test3()
+    {
+        // TODO: Implement test3() method.
+    }
+
+    public function sayHi()
+    {
+        // TODO: Implement sayHi() method.
+    }
+
+    public function overide()
+    {
+        echo "this is student class method";
     }
 }
 
 
-$studentObject = new StudentClass('test' , 'test' , 15 , 'test address' , 90 , 'IT');
+$studentObject = new StudentClass('test', 'test', 15, 'test address', 90, 'IT');
 
 echo $studentObject->getStudentData();

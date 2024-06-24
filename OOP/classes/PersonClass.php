@@ -3,9 +3,9 @@
 
 
 // parent class
-// super class
+// superclass
 // base class
-class PersonClass
+class PersonClass extends HumanClass
 {
     protected $name;
 
@@ -19,12 +19,6 @@ class PersonClass
         $this->name = $name;
         $this->age = $age;
         $this->address = $address;
-    }
-
-
-    public function overide()
-    {
-        echo "this is parent class method";
     }
 
     /**
@@ -76,4 +70,13 @@ class PersonClass
     }
 
 
+    public function greet()
+    {
+        echo 'hello person';
+    }
+
+    public function overide()
+    {
+        echo "this is person class method";
+    }
 }

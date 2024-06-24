@@ -6,7 +6,7 @@ include 'PersonClass.php';
 
 
 // child class
-// sub class
+// subclass
 // derived class
 class UserClass extends PersonClass
 {
